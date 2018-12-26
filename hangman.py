@@ -168,16 +168,12 @@ def hangman(secret_word):
                 break
 
         else:
-            if guess == "hint":
-                letter = get_hint(secret_word, letters_guessed)
-                print "Your hint for next character",letter
-            else:
-                print "Oops! That letter is not in my word: " + get_guessed_word(secret_word, letters_guessed)
-                print IMAGES[8-remaining_lives]
-                print "Remaining Lives : ", remaining_lives
-                print ""
-                remaining_lives -= 1
-                print remaining_lives
+            print "Oops! That letter is not in my word: " + get_guessed_word(secret_word, letters_guessed)
+            print IMAGES[8-remaining_lives]
+            print "Remaining Lives : ", remaining_lives
+            print ""
+            remaining_lives -= 1
+            print remaining_lives
     else:
         print "Sorry, you ran out of guesses. The word was " + str(secret_word) + "."
 
